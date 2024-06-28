@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Iwona";
+    src: "./iwona-regural.ttf";
+}
+
+body {
+    background-image: url("https://i.pinimg.com/originals/63/78/95/637895ac74abed705e75c010cfd3ea1b.jpg");
+    font-family: "Iwona";
+    font-size: 20px;
+    line-height: 0.1;
+    color: rgb(199, 198, 198);
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+div {
+    background-color: rgba(70, 62, 47, 0.37);
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    border-radius: 19px;
+}
+
+input {
+    width: 100%;
+    border-radius: 19px;
+    height: 25px;
+}
+
+label {
+    line-height: 2;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding-block: 9px;
+    padding-inline: 39px;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 19px;
+    margin-left: auto;
+    margin-right: auto;
+}

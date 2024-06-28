@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css.css">
+    <title>Запись на приём</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById ("fname").value;
+            let letterPattern = /^[а-яёА-ЯЁ-]+\s[а-яёА-ЯЁ-]+\s[а-яёА-ЯЁ-]+/;
+            let phoneNumber = document.getElementById ("phoneNumber").value;
+
+            if (!name.match(letterPattern)) {
+                alert ("ФИО должно быть полным и содержать только русские буквы и пробелы");
+                return false
+            }
+
+            if (!phoneNumber.match(/(^[7|8]{0,1}\d{10}&)|(^\+7{1}\d{10}$)/)) {
+                alert ("Неккоректный номер телефона. Введите номер телефона в формате +7ХХХХХХХХХХ");
+                return false
+            }
+            return true
+        }
+    </script>
+</head>
+<body>
+    <div id="form">
+        <h2>Запись на приём</h2>
+        <form onsubmit="return validateForm()">
+            <div>
+                <label>Фамилия, имя, отчество</label>
+                <input type="text" id="fname" required><br><br>
+            </div>
+
+            <div>
+                <label>Дата рождения</label>
+                <input type="date" id="dateOfBirth" max="2006-12-12" required><br><br>
+            </div>
+
+            <div>
+                <label>Телефон</label>
+                <input type="text" id="phoneNumber" required><br><br>
+            </div>
+
+            <div>
+                <label>Дата приёма</label>
+                <input type="date" id="dateField" min="2024-06-29" required><br><br>
+            </div>
+
+            <div>
+                <label>Время приёма</label>
+                <input type="time" id="timeField" min="08:00" max="22:00" required><br><br>
+            </div>
+
+            <div class="cnopka">
+                <button type="submit" class="btn">Отправить</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
